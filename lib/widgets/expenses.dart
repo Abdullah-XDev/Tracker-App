@@ -15,12 +15,12 @@ class Expenses extends StatefulWidget {
 class _ExpensesState extends State<Expenses> {
   final List<Expense> _registredExpenses = [
     Expense(
-        title: 'Transportation',
+        title: 'Transportation مواصلات',
         amount: 39.9,
         date: DateTime.now(),
         category: Category.work),
     Expense(
-        title: 'Movie',
+        title: 'Movie افلام',
         amount: 49.9,
         date: DateTime.now(),
         category: Category.leisure),
@@ -52,9 +52,9 @@ class _ExpensesState extends State<Expenses> {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         duration: const Duration(seconds: 3),
-        content: const Text('Expense Deleted'),
+        content: const Text('Expense Deleted حذفت النفقات'),
         action: SnackBarAction(
-            label: 'Undo',
+            label: 'Undo تراجع',
             onPressed: () {
               setState(() {
                 _registredExpenses.insert(expenseIndex, expense);
@@ -70,7 +70,7 @@ class _ExpensesState extends State<Expenses> {
 
 
     Widget mainContent = const Center(
-      child: Text('No Expenses found. Start adding some?!'),
+      child: Text('No Expenses found. Start adding some?! لا يوجد نفقات قم بالاضافة'),
     );
 
     if (_registredExpenses.isNotEmpty) {
@@ -82,7 +82,7 @@ class _ExpensesState extends State<Expenses> {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Expense Tracker'), //تتبع نفقاتك
+        title: const Text('Expense Tracker تتبع نفقاتك'), //تتبع نفقاتك
         actions: [
           IconButton(
             onPressed: _openAddExpenseOverlay,
