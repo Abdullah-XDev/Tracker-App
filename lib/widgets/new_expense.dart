@@ -42,14 +42,14 @@ class _NewExpenseState extends State<NewExpense> {
       showDialog(
         context: context,
         builder: (ctx) => AlertDialog(
-          title: const Text('Invalid Input غير صحيح'),
-          content: const Text('Please make sure to fill all fields correctly! الرجاء التأكد من ادخال جميع الحقول'),
+          title: const Text('Invalid Input'),
+          content: const Text('Please make sure to fill all fields correctly!'),
           actions: [
             TextButton(
               onPressed: () {
                 Navigator.pop(ctx);
               },
-              child: const Text('Okay تم'),
+              child: const Text('Okay'),
             ),
           ],
         ),
@@ -97,7 +97,7 @@ class _NewExpenseState extends State<NewExpense> {
                   controller: _titleController,
                   maxLength: 50,
                   decoration: const InputDecoration(
-                    label: Text('Title العنوان'),
+                    label: Text('Title'),
                   ),
                 ),
                 ),
@@ -108,7 +108,7 @@ class _NewExpenseState extends State<NewExpense> {
                         keyboardType: TextInputType.number,
                         decoration: const InputDecoration(
                           prefixText: '\$ ',
-                          label: Text('Amount المبلغ'),
+                          label: Text('Amount'),
                         ),
                       ),
                     ),
@@ -119,7 +119,7 @@ class _NewExpenseState extends State<NewExpense> {
                   controller: _titleController,
                   maxLength: 50,
                   decoration: const InputDecoration(
-                    label: Text('Title العنوان'),
+                    label: Text('Title'),
                   ),
                 ),
                 if (width >= 600)
@@ -173,7 +173,7 @@ class _NewExpenseState extends State<NewExpense> {
                         keyboardType: TextInputType.number,
                         decoration: const InputDecoration(
                           prefixText: '\$ ',
-                          label: Text('Amount المبلغ'),
+                          label: Text('Amount'),
                         ),
                       ),
                     ),
@@ -209,11 +209,11 @@ class _NewExpenseState extends State<NewExpense> {
                       onPressed: () {
                         Navigator.pop(context);
                       },
-                      child: const Text('Cancel الغاء'),
+                      child: const Text('Cancel'),
                     ),
                     ElevatedButton(
                       onPressed: _submitExpenseDatea,
-                      child: const Text('Save Expense خفظ'),
+                      child: const Text('Save Expense'),
                     ),
                 ],)
                 else
@@ -245,11 +245,11 @@ class _NewExpenseState extends State<NewExpense> {
                       onPressed: () {
                         Navigator.pop(context);
                       },
-                      child: const Text('Cancel الغاء'),
+                      child: const Text('Cancel'),
                     ),
                     ElevatedButton(
                       onPressed: _submitExpenseDatea,
-                      child: const Text('Save Expense حفظ'),
+                      child: const Text('Save Expense'),
                     ),
                   ],
                 )
